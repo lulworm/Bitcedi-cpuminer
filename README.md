@@ -1,10 +1,8 @@
-CPUMiner-Multi
+Bitcedi-CPUMiner
 ==============
 
-[![Build Status](https://travis-ci.org/lucasjones/cpuminer-multi.svg?branch=master)](https://travis-ci.org/lucasjones/cpuminer-multi)
+This is a multi-threaded CPU miner, fork of [LucasJones](github.com/lucasjones)' cpuminer-multi.
 
-This is a multi-threaded CPU miner,
-fork of [pooler](//github.com/pooler)'s cpuminer (see AUTHORS for list of contributors).
 
 #### Table of contents
 
@@ -20,28 +18,7 @@ fork of [pooler](//github.com/pooler)'s cpuminer (see AUTHORS for list of contri
 Algorithms
 ==========
 #### Currently supported
- * ✓ __scrypt__ (Litecoin, Dogecoin, Feathercoin, etc..)
- * ✓ __scrypt:N__ (Vertcoin [VTC])
- * ✓ __sha256d__ (Bitcoin, Freicoin, Peercoin/PPCoin, Terracoin, etc..)
- * ✓ __x11__ (Darkcoin [DRK], Hirocoin, Limecoin)
- * ✓ __x13__ (Sherlockcoin, [ACE], [B2B], [GRC], [XHC], etc..)
- * ✓ __x14__ (X14, Webcoin [WEB])
- * ✓ __x15__ (RadianceCoin [RCE])
- * ✓ __cryptonight__ (Bytecoin [BCN], Monero)
- * ✓ __fresh__ (FreshCoin)
-
-#### Implemented, but untested
- * ? keccak (Maxcoin  HelixCoin, CryptoMeth, Galleon, 365coin, Slothcoin, BitcointalkCoin)
- * ? hefty1 (Heavycoin)
- * ? quark (Quarkcoin)
- * ? skein (Skeincoin, Myriadcoin)
- * ? shavite3 (INKcoin)
- * ? blake (Blakecoin)
-
-#### Planned support for
- * *scrypt-jane* (YaCoin, CopperBars, Pennies, Tickets, etc..)
- * *qubit* (Qubitcoin, Myriadcoin)
- * *groestl* (Groestlcoin)
+ * ✓ __cryptonight__ (Bitcedi [BXC], Bytecoin, Monero)
 
 Dependencies
 ============
@@ -51,9 +28,9 @@ Dependencies
 
 Download
 ========
-* Binary releases: https://github.com/LucasJones/cpuminer-multi/releases
-* Git tree:   https://github.com/LucasJones/cpuminer-multi
-  * Clone with `git clone https://github.com/LucasJones/cpuminer-multi`
+* Binary releases: https://github.com/lulworm/Bitcedi-cpuminer/releases
+* Git tree:   https://github.com/lulworm/Bitcedi-cpuminer
+* Clone with `git clone https://github.com/lulworm/Bitcedi-cpuminer.git`
 
 Build
 =====
@@ -101,6 +78,11 @@ Usage instructions
 ==================
 Run "minerd --help" to see options.
 
+Example command line
+==================
+./minerd -a cryptonight -o stratum+tcp://pool.bitcedi.org:4333 -p x -u cxpYzrmuGXX1SLkroarf7tF9zvhr2fcuw7A9GVCsR3tjENbwmb72YwUAFrMsSm8KHhD83TSeDRntRMcGSBSPSFEv2mwsUjBgd -t 2
+
+
 ### Connecting through a proxy
 
 Use the --proxy option.
@@ -119,7 +101,8 @@ Donations for the work done in this fork are accepted at
 
 Credits
 =======
-CPUMiner-multi was forked from pooler's CPUMiner, and has been developed by Lucas Jones.
+CPUMiner-multi was forked from Lucas Jones's CPUMiner.
+* [Lucas Jones](https://github.com/lucasjones/cpuminer-multi)
 * [tpruvot](https://github.com/tpruvot) added some features and recent SHA3 based algorythmns
 * [Wolf9466](https://github.com/wolf9466) helped with Intel AES-NI support for CryptoNight
 
